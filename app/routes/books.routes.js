@@ -4,8 +4,26 @@ module.exports = app => {
     var router = require("express").Router();
   
     // Create a new book
-    router.post("/", books.create);
+  /**
+ * @swagger
+ * /api/books:
+ *   post:
+ *     description: This is a test get data call
+ *     responses: 
+ *       200:
+ *         description: Success
+ */
 
+    router.post("/", books.create);
+  /**
+ * @swagger
+ * /api/books:
+ *   get:
+ *     description: This is a test get data call
+ *     responses: 
+ *       200:
+ *         description: Success
+ */
     // Retrieve all books
     router.get("/", books.findAll);
   
